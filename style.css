@@ -1,0 +1,61 @@
+
+@keyframes amongos_andando {
+
+    0% {    background-image: url("./resources/amongos_frame1.png"); }
+    25% {   background-image: url("./resources/amongos_frame2.png"); }
+    50% {   background-image: url("./resources/amongos_frame3.png"); }
+    75% {   background-image: url("./resources/amongos_frame4.png"); }
+
+}
+
+@keyframes background_animation {
+    from{
+        background-position: 30000%;
+    }
+    to{
+        background-position: 0;
+    }
+}
+
+body{
+    background-image: url("./resources/fundo.png");
+}
+
+.background{
+    position: absolute;
+    bottom: 0;
+    background-image: url("./resources/walking_path.png");
+    background-repeat: repeat-x;
+    animation: background_animation 600s infinite linear;
+    width: 100%;
+    height: 320px;
+}
+
+.entity {
+    width: 60px;
+    height: 90px;
+    background-image: url("./resources/amongos_frame1.png");
+    position: absolute;
+    bottom: 0;
+    animation: amongos_andando 0.5s infinite linear;
+}
+
+.obstacle {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    background-image: url("./resources/rock.png");
+}
+
+.game-score h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.game-over {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
